@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
           formStatus.className = 'form-status success';
           formStatus.innerHTML = `
             <strong>Secure Transmission Successful!</strong><br>
-            Thank you, ${name}. Your inquiry regarding our <strong>${selectedSectorName}</strong> operations has been successfully routed. An official representative from the Accra head office of <strong>Ali’s Premedge Ventures</strong> will correspond with you at <strong>${email}</strong> within 24 business hours.
+            Thank you, ${name}. Your inquiry regarding our <strong>${selectedSectorName}</strong> operations has been successfully routed. An official representative from the Accra head office of <strong>Ali’s Primedge Ventures</strong> will correspond with you at <strong>${email}</strong> within 24 business hours.
           `;
           contactForm.reset();
         } else {
