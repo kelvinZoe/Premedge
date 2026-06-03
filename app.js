@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Submit to Formspree (Option 1)
       // NOTE: Replace 'FORM_ID' with your actual Formspree form ID (e.g., 'mqkvgwpz')
-      const formspreeEndpoint = 'https://formspree.io/f/FORM_ID';
+      const formspreeEndpoint = 'https://formspree.io/f/mjgdbokb';
 
       // Fallback/Simulated submit if FORM_ID is not replaced yet
       if (formspreeEndpoint.endsWith('FORM_ID')) {
