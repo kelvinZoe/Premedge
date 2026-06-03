@@ -1407,6 +1407,11 @@ footer {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .map-container {
+    padding: 1.5rem 0.8rem;
+    border-radius: 12px;
+  }
   
   .form-grid {
     grid-template-columns: 1fr;
