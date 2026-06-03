@@ -14,7 +14,7 @@
     <div class="container">
       <a href="#" class="logo">
         <img src="assets/images/premedge_logo.png" alt="Ali’s Premedge Ventures Logo">
-        <span>PREMEDGE VENTURES</span>
+        <span>ALI'S PREMEDGE VENTURES</span>
       </a>
       <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle navigation menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -287,46 +287,46 @@
       <div class="map-container scroll-reveal">
         <!-- SVG Localized West African Corridor Map Outline -->
         <svg viewBox="0 0 600 320" class="world-map-svg" xmlns="http://www.w3.org/2000/svg" style="max-height: 450px;">
-          <!-- Stylized Outlines of West African Countries (Côte d'Ivoire, Ghana, Togo, Benin, Nigeria) -->
+          <!-- Accurate Geographic borders -->
           <g fill="rgba(197, 168, 128, 0.04)" stroke="var(--color-border)" stroke-width="1.2">
-            <!-- Côte d'Ivoire Shape -->
-            <path d="M 50,40 L 230,30 L 245,120 L 235,240 L 215,245 L 75,235 Z" />
-            <!-- Ghana Shape (HQ highlight) -->
-            <path d="M 260,40 L 385,45 L 395,235 L 250,240 Z" fill="rgba(197, 168, 128, 0.08)" />
-            <!-- Togo Shape -->
-            <path d="M 410,60 L 440,60 L 445,230 L 410,232 Z" />
-            <!-- Benin Shape -->
-            <path d="M 455,60 L 515,40 L 535,110 L 520,225 L 455,228 Z" />
-            <!-- Nigeria Shape (partial) -->
-            <path d="M 545,40 L 590,40 L 590,220 L 545,220 Z" />
+            <!-- Côte d'Ivoire -->
+            <path id="border-civ" d="M 284.5,272.6 L 268.9,272.9 L 245.1,266.2 L 223.2,266.6 L 182.7,272.6 L 158.9,282.5 L 125.1,295.0 L 118.5,294.1 L 121.1,265.9 L 124.4,261.7 L 123.3,248.2 L 108.9,233.9 L 98.0,231.6 L 88.0,222.2 L 95.5,207.0 L 92.0,190.5 L 93.6,180.5 L 99.0,180.5 L 101.1,165.6 L 98.4,159.0 L 101.7,154.2 L 114.4,150.1 L 105.9,122.8 L 98.1,108.6 L 100.8,97.0 L 107.6,94.4 L 112.1,91.3 L 121.5,96.4 L 147.9,96.7 L 154.2,86.7 L 160.1,87.4 L 170.0,83.5 L 175.3,98.1 L 183.3,93.8 L 197.4,88.8 L 212.8,96.2 L 218.7,107.5 L 234.1,114.7 L 246.1,106.1 L 262.1,104.8 L 285.5,113.7 L 294.6,162.3 L 280.1,191.0 L 271.2,229.6 L 286.1,259.1 L 284.5,272.6 Z " />
+            <!-- Ghana (HQ highlight) -->
+            <path id="border-gha" d="M 418.4,240.6 L 364.8,260.6 L 345.8,272.4 L 315.0,282.3 L 284.5,272.6 L 286.1,259.1 L 271.2,229.6 L 280.1,191.0 L 294.6,162.3 L 285.5,113.7 L 280.8,87.9 L 281.6,68.5 L 341.0,66.9 L 356.1,69.4 L 367.2,63.9 L 383.0,66.6 L 380.4,77.3 L 394.7,94.9 L 394.7,119.7 L 397.9,146.7 L 406.5,159.1 L 398.9,189.9 L 401.7,206.9 L 410.8,228.6 L 418.4,240.6 Z " fill="rgba(197, 168, 128, 0.08)" />
+            <!-- Togo -->
+            <path id="border-tgo" d="M 445.9,233.3 L 418.4,240.6 L 410.8,228.6 L 401.7,206.9 L 398.9,189.9 L 406.5,159.1 L 397.9,146.7 L 394.7,119.7 L 394.7,94.9 L 380.4,77.3 L 383.0,66.6 L 412.9,67.3 L 408.6,85.3 L 419.0,95.4 L 430.9,107.4 L 432.2,124.2 L 439.1,131.2 L 437.5,209.7 L 445.9,233.3 Z " />
+            <!-- Benin -->
+            <path id="border-ben" d="M 474.2,229.3 L 445.9,233.3 L 437.5,209.7 L 439.1,131.2 L 432.2,124.2 L 430.9,107.4 L 419.0,95.4 L 408.6,85.3 L 412.9,67.3 L 424.7,63.5 L 431.6,48.5 L 448.3,45.3 L 455.8,35.1 L 467.3,25.1 L 479.5,25.0 L 505.6,44.7 L 504.3,56.0 L 512.0,76.3 L 505.2,90.1 L 508.8,99.3 L 492.3,120.4 L 481.7,130.9 L 475.3,152.5 L 476.1,174.2 L 474.2,229.3 Z " />
+            <!-- Nigeria (partial) -->
+            <path id="border-nga" d="M 672.8,280.2 L 637.3,292.5 L 624.3,290.7 L 611.1,298.3 L 583.8,297.6 L 565.5,276.2 L 554.2,251.5 L 530.0,228.9 L 504.3,229.4 L 474.2,229.3 L 476.1,174.2 L 475.3,152.5 L 481.7,130.9 L 492.3,120.4 L 508.8,99.3 L 505.2,90.1 L 512.0,76.3 L 504.3,56.0 L 505.6,44.7 L 508.0,14.2 L 517.8,0.4 L 522.6,-19.3 L 531.5,-26.7 L 568.2,-30.7 L 602.5,-18.0 L 615.3,-5.1 L 632.8,-4.5 L 649.0,-12.9 L 690.4,4.8 L 707.8,4.0 L 728.0,-10.6 L 748.0,-9.6 L 757.9,-14.4 L 776.3,-12.4 L 802.7,-2.4 L 829.5,-21.5 L 837.5,-20.2 L 860.6,17.3 L 867.0,16.5 L 880.5,30.1 L 876.8,36.3 L 875.0,47.7 L 846.2,74.1 L 837.2,96.0 L 832.3,113.7 L 825.1,121.3 L 818.2,145.3 L 799.9,159.4 L 794.6,176.7 L 786.9,190.4 L 783.7,204.6 L 760.2,216.2 L 741.0,202.1 L 728.1,202.7 L 707.7,222.7 L 697.8,223.0 L 681.6,256.0 L 672.8,280.2 Z " />
           </g>
 
-          <!-- Accra to Abidjan (150, 215) -->
-          <path d="M320 215 Q235 185 150 215" fill="none" stroke-width="2" class="map-glow-path" />
-          <path id="route-abidjan" d="M320 215 Q235 185 150 215" fill="none" stroke-width="1.8" class="map-route-path" />
+          <!-- Accra to Abidjan -->
+          <path d="M375.8 251.7 Q310.4 226.7 245.1 260.1" fill="none" stroke-width="2" class="map-glow-path" />
+          <path id="route-abidjan" d="M375.8 251.7 Q310.4 226.7 245.1 260.1" fill="none" stroke-width="1.8" class="map-route-path" />
 
-          <!-- Accra to Lomé (425, 215) -->
-          <path d="M320 215 Q372.5 195 425 215" fill="none" stroke-width="2" class="map-glow-path" />
-          <path id="route-lome" d="M320 215 Q372.5 195 425 215" fill="none" stroke-width="1.8" class="map-route-path" />
+          <!-- Accra to Lomé -->
+          <path d="M375.8 251.7 Q399.8 236.7 423.7 233.5" fill="none" stroke-width="2" class="map-glow-path" />
+          <path id="route-lome" d="M375.8 251.7 Q399.8 236.7 423.7 233.5" fill="none" stroke-width="1.8" class="map-route-path" />
 
-          <!-- Accra to Cotonou (485, 215) -->
-          <path d="M320 215 Q402.5 180 485 215" fill="none" stroke-width="2" class="map-glow-path" />
-          <path id="route-cotonou" d="M320 215 Q402.5 180 485 215" fill="none" stroke-width="1.8" class="map-route-path" />
+          <!-- Accra to Cotonou -->
+          <path d="M375.8 251.7 Q420.4 231.7 465.1 225.6" fill="none" stroke-width="2" class="map-glow-path" />
+          <path id="route-cotonou" d="M375.8 251.7 Q420.4 231.7 465.1 225.6" fill="none" stroke-width="1.8" class="map-route-path" />
 
           <!-- Node Pulses (Accra Hub) -->
-          <circle cx="320" cy="215" r="14" class="map-node-pulse" />
+          <circle cx="375.8" cy="251.7" r="14" class="map-node-pulse" />
 
           <!-- Map Interactive Regional Nodes -->
-          <circle cx="320" cy="215" r="7" class="map-node" data-location="Accra" />
-          <circle cx="150" cy="215" r="5" class="map-node" data-location="Abidjan" />
-          <circle cx="425" cy="215" r="5" class="map-node" data-location="Lomé" />
-          <circle cx="485" cy="215" r="5" class="map-node" data-location="Cotonou" />
+          <circle cx="375.8" cy="251.7" r="7" class="map-node" data-location="Accra" />
+          <circle cx="245.1" cy="260.1" r="5" class="map-node" data-location="Abidjan" />
+          <circle cx="423.7" cy="233.5" r="5" class="map-node" data-location="Lomé" />
+          <circle cx="465.1" cy="225.6" r="5" class="map-node" data-location="Cotonou" />
 
           <!-- Location Name Labels -->
-          <text x="320" y="238" fill="var(--color-gold-dark)" font-size="11" font-family="Outfit" font-weight="700" text-anchor="middle">ACCRA (HQ)</text>
-          <text x="150" y="238" fill="var(--color-text-primary)" font-size="10" font-family="Outfit" font-weight="600" text-anchor="middle">ABIDJAN</text>
-          <text x="425" y="238" fill="var(--color-text-primary)" font-size="10" font-family="Outfit" font-weight="600" text-anchor="middle">LOMÉ</text>
-          <text x="485" y="238" fill="var(--color-text-primary)" font-size="10" font-family="Outfit" font-weight="600" text-anchor="middle">COTONOU</text>
+          <text x="375.8" y="271.7" fill="var(--color-gold-dark)" font-size="11" font-family="Outfit" font-weight="700" text-anchor="middle">ACCRA (HQ)</text>
+          <text x="245.1" y="280.1" fill="var(--color-text-primary)" font-size="10" font-family="Outfit" font-weight="600" text-anchor="middle">ABIDJAN</text>
+          <text x="423.7" y="253.5" fill="var(--color-text-primary)" font-size="10" font-family="Outfit" font-weight="600" text-anchor="middle">LOMÉ</text>
+          <text x="465.1" y="245.6" fill="var(--color-text-primary)" font-size="10" font-family="Outfit" font-weight="600" text-anchor="middle">COTONOU</text>
         </svg>
 
         <!-- Map Legend / Local Stats -->
