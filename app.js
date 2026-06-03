@@ -80,40 +80,70 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* --- MAP PATH HOVER HIGHLIGHTS (GHANA CITIES) --- */
+  /* --- MAP PATH HOVER HIGHLIGHTS (WEST AFRICAN REGIONAL CORRIDOR) --- */
   const mapNodes = document.querySelectorAll('.map-node');
   
-  // Maps domestic Ghana target locations to their corresponding SVG route IDs
+  // Maps target locations to their corresponding SVG route IDs
   const locationRoutes = {
-    'Kumasi': 'route-kumasi',
-    'Tamale': 'route-tamale',
-    'Takoradi': 'route-takoradi',
-    'Ho': 'route-ho'
+    'Abidjan': 'route-abidjan',
+    'Lomé': 'route-lome',
+    'Cotonou': 'route-cotonou'
   };
 
   mapNodes.forEach(node => {
     const loc = node.getAttribute('data-location');
-    const routeId = locationRoutes[loc];
     
-    if (routeId) {
-      const routeElement = document.getElementById(routeId);
-
-      if (routeElement) {
-        node.addEventListener('mouseenter', () => {
-          routeElement.style.strokeWidth = '3.5px';
-          routeElement.style.stroke = 'var(--color-gold-dark)';
-          routeElement.style.opacity = '1.0';
-          routeElement.style.filter = 'drop-shadow(0 0 6px var(--color-gold))';
+    node.addEventListener('mouseenter', () => {
+      if (loc === 'Accra') {
+        // Highlight all regional routes when hovering Accra (HQ)
+        Object.values(locationRoutes).forEach(rId => {
+          const routeElement = document.getElementById(rId);
+          if (routeElement) {
+            routeElement.style.strokeWidth = '3.5px';
+            routeElement.style.stroke = 'var(--color-gold-dark)';
+            routeElement.style.opacity = '1.0';
+            routeElement.style.filter = 'drop-shadow(0 0 6px var(--color-gold))';
+          }
         });
-
-        node.addEventListener('mouseleave', () => {
-          routeElement.style.strokeWidth = '1.8px';
-          routeElement.style.stroke = 'var(--color-gold-dark)';
-          routeElement.style.opacity = '0.7';
-          routeElement.style.filter = 'none';
-        });
+      } else {
+        const routeId = locationRoutes[loc];
+        if (routeId) {
+          const routeElement = document.getElementById(routeId);
+          if (routeElement) {
+            routeElement.style.strokeWidth = '3.5px';
+            routeElement.style.stroke = 'var(--color-gold-dark)';
+            routeElement.style.opacity = '1.0';
+            routeElement.style.filter = 'drop-shadow(0 0 6px var(--color-gold))';
+          }
+        }
       }
-    }
+    });
+
+    node.addEventListener('mouseleave', () => {
+      if (loc === 'Accra') {
+        // Reset all regional routes when leaving Accra (HQ)
+        Object.values(locationRoutes).forEach(rId => {
+          const routeElement = document.getElementById(rId);
+          if (routeElement) {
+            routeElement.style.strokeWidth = '1.8px';
+            routeElement.style.stroke = 'var(--color-gold-dark)';
+            routeElement.style.opacity = '0.7';
+            routeElement.style.filter = 'none';
+          }
+        });
+      } else {
+        const routeId = locationRoutes[loc];
+        if (routeId) {
+          const routeElement = document.getElementById(routeId);
+          if (routeElement) {
+            routeElement.style.strokeWidth = '1.8px';
+            routeElement.style.stroke = 'var(--color-gold-dark)';
+            routeElement.style.opacity = '0.7';
+            routeElement.style.filter = 'none';
+          }
+        }
+      }
+    });
   });
 
 
@@ -271,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.className = 'form-status error';
         formStatus.innerHTML = `
           <strong>Transmission Error</strong><br>
-          We encountered an error transmitting your inquiry. Please try again or email us directly at <a href="mailto:info@nizartv.com">info@nizartv.com</a>.
+          We encountered an error transmitting your inquiry. Please try again or email us directly at <a href="mailto:umarali90123@gmail.com">umarali90123@gmail.com</a>.
         `;
       })
       .finally(() => {

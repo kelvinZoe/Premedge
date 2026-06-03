@@ -303,8 +303,8 @@ header.scrolled .logo img {
   z-index: -1;
   background-size: cover;
   background-position: center;
-  opacity: 0.08; /* Highly translucent for faint light texture */
-  filter: contrast(100%);
+  opacity: 0.22; /* Increased for vividness, as requested by user */
+  filter: contrast(110%) brightness(95%);
   animation: bgZoom 30s infinite alternate;
 }
 
@@ -1554,4 +1554,133 @@ footer {
 
 .custom-option.selected {
   font-weight: 600;
+}
+
+/* --- OPERATIONS GALLERY SECTION --- */
+.operations-gallery {
+  background: var(--color-bg-deep);
+  position: relative;
+}
+
+.operations-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--color-border);
+  height: 380px;
+  background: var(--color-bg-obsidian);
+  transition: var(--transition-normal);
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 60%, rgba(15, 23, 42, 0) 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0.9;
+  transition: var(--transition-normal);
+}
+
+.gallery-tag {
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-gold-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.6rem;
+  background: rgba(197, 168, 128, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+}
+
+.gallery-overlay h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-overlay p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+/* Hover effects */
+.gallery-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold-dark);
+  box-shadow: 0 16px 40px rgba(197, 168, 128, 0.15), var(--gold-shadow);
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay p {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjust for gallery */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .gallery-card {
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
