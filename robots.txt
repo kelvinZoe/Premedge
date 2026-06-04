@@ -1,0 +1,8 @@
+# robots.txt for alisprimedgeventures.com
+# Instructs search engine crawlers which pages they are allowed to index.
+
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap for efficient page discovery
+Sitemap: https://alisprimedgeventures.com/sitemap.xml
